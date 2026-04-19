@@ -68,6 +68,14 @@ def get_weather(message):
             f'Скорость ветра: {wind_speed} м/с'
         )
 
+        bot.reply_to(message, weather_info)
+    
+    except Exception as e:
+        bot.reply_to(message, f'Произошла ошибка: {str(e)}')
+
+if __name__ == '__main__':
+    print('Погода - бот запущен...')
+    bot.infinity_polling()
 
 
 
