@@ -58,7 +58,15 @@ def get_weather(message):
         pressure = data['main']['pressure']
         wind_speed = data['wind']['speed']
 
-
+        weather_info = (
+            f'🌦️ Погода в {city}:\n\n'
+            f'Описание: {weather_desc.capitalize()}'
+            f'Температура: {temp:.1f}°C\n'
+            f'Ощущается как: {feels_like:.1f}°C\n'
+            f'Влажность: {humidity}%\n'
+            f'Давление: {pressure} гПа\n'
+            f'Скорость ветра: {wind_speed} м/с'
+        )
 
 
 
