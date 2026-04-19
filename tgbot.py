@@ -50,8 +50,13 @@ def get_weather(message):
             else:
                 bot.reply_to(message, 'Ошибка при получении данных о погоде.')
             return
-
-
+        
+        weather_desc = data['weather'][0]['description']
+        temp = data['main']['temp']
+        feels_like = data['main']['feels_like']
+        humidity = data['main']['humidity']
+        pressure = data['main']['pressure']
+        wind_speed = data['wind']['speed']
 
 
 
